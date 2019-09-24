@@ -1,0 +1,40 @@
+---
+name: "kids-homestead"
+ip: "192.168.10.40"
+memory: 8192
+cpus: 4
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa_kids.pub
+
+keys:
+    - ~/.ssh/id_rsa_kids
+
+folders:
+    - map: ~/Projects/KidsCoFund/development
+      to: /home/vagrant/projects
+
+sites:
+    - map: l.kidscofund.com
+      to: /home/vagrant/projects/kidscofund.com/html
+      php: "7.2"
+
+databases:
+    - l_kidscofund_com
+
+variables:
+    - key: APP_ENV
+      value: local
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
