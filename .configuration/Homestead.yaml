@@ -16,8 +16,7 @@ folders:
 
 sites:
     - map: l.kidscofund.com
-      to: /home/vagrant/projects/kidscofund.com/html
-      php: "7.2"
+      to: /home/vagrant/projects/kidscofund.com/public
 
 databases:
     - l_kidscofund_com
